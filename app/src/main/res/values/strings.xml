@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AsyncTaskLoader19110189</string>
+    <string name="instructions">Enter URL: </string>
+    <string name="button_text">GET PAGE SOURCE</string>
+    <string name="input_hint">www.example.com</string>
+    <string name="description">Page source will appear here</string>
+    <string-array name="option">
+        <item>https://</item>
+        <item>http://</item>
+    </string-array>
+</resources>

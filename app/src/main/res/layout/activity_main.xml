@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+        <TextView
+            android:id="@+id/textViewInstruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/instructions"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.055"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/pageSourceInput"
+            android:layout_width="184dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="29dp"
+            android:hint="@string/input_hint"
+            android:inputType="text"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/spinnerItem"
+            app:layout_constraintTop_toBottomOf="@+id/textViewInstruction" />
+
+        <Spinner
+            android:id="@+id/spinnerItem"
+            android:layout_width="69dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:paddingEnd="1dp"
+            android:paddingRight="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewInstruction" />
+
+        <Button
+            android:id="@+id/buttonGetPageSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/deepskyblue"
+            android:textStyle="bold"
+            android:onClick="getPageSourceClick"
+            android:text="@string/button_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pageSourceInput"
+            app:layout_goneMarginTop="20dp" />
+
+        <TextView
+            android:id="@+id/textViewPageSource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:padding = "10dp"
+            android:textSize="20dp"
+            android:background="@drawable/textview_border"
+            android:hint="Page source will appear here. Wait until data loads successfully."
+            android:textStyle="bold"
+            android:textAppearance=
+                "@style/TextAppearance.AppCompat.Headline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonGetPageSource"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
